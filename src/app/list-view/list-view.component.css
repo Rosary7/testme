@@ -1,0 +1,8 @@
+
+.keep-c-list-container {
+    width: 60vw;
+    margin:5vh auto;
+    display: flex;
+    flex-direction: column;
+    
+}

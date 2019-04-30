@@ -1,0 +1,27 @@
+<label class="error-message">{{ submitMessage }}</label>
+<div class="keep-c-note-container">
+        <h2>Add Category</h2>
+    <form class="category-form" (ngSubmit)="addCategory()">
+    <mat-form-field>
+      <input class="categoryName" matInput placeholder="Category Name" [formControl]='categoryName'>
+  </mat-form-field>
+  <mat-form-field>
+    <input class="categoryDescription" matInput placeholder="Category Description" [formControl]='categoryDescription'>
+</mat-form-field>          
+    <button type="submit" mat-raised-button color="primary">Add</button>
+    </form>        
+
+</div>
+
+    <h2>Edit Category</h2>
+        <!-- Include the notes collection with each note rendered as a separate NoteComponent -->
+            <!--Display the notes fetched from db.json -->
+           
+            <app-single-category [category] = "category" *ngFor="let category of categoryList"></app-single-category>
+
+            <div class=keep-c-note-container>
+            <button mat-raised-button color="primary" (click)="goback()">Done</button>
+        </div>
+
+  
+    

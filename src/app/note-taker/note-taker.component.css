@@ -1,0 +1,29 @@
+.note-expansion-panel-container{
+    width:60vw;
+    margin:5vh auto;
+}
+
+.note-taker-form-fields-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-container{
+    width: 60vw;
+    margin:5vh auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.error-message{
+    color:red;
+    font-size:1em;
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+}

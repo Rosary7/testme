@@ -1,0 +1,12 @@
+
+<mat-toolbar color="primary">KeepNote
+	<div class="keep-c-toggle-view">
+		<i *ngIf="isNoteView" class="material-icons switchToListView" (click)=changeToListView()>view_list</i>
+		<i *ngIf="!isNoteView" class="material-icons switchToNoteView" (click)=changeToNoteView()>view_quilt</i>
+		<i class="material-icons" (click)=logout()>exit_to_app</i>
+		</div>
+	
+</mat-toolbar>
+
+
+

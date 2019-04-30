@@ -1,0 +1,50 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<!-- Expansion panel to add new notes -->
+<!-- Label to display any error messages -->
+<div class= "notes-container">
+  <div class="note-expansion-panel-container">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Take a note
+              </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="note-taker-form-fields-container">
+            <mat-form-field>
+              <input matInput class="title" id="title" name="title" placeholder="Enter Title" [(ngModel)]="note.noteTitle">
+            </mat-form-field>
+          
+            <mat-form-field>
+              <textarea matInput class="text" id="text" name="text" placeholder="Enter Content" [(ngModel)]="note.noteContent"></textarea>
+            </mat-form-field>
+
+            <mat-select name="category" placeholder="Select category" [(ngModel)]="note.category">
+              <mat-option *ngFor="let category of categoryList" [value]="category">
+                {{ category.categoryName }}
+              </mat-option>
+            </mat-select>
+            <label></label>
+            <mat-select name="reminder" placeholder="Select reminder" [(ngModel)]="note.reminder">
+              <mat-option *ngFor="let reminder of reminderList" [value]="reminder">
+                {{ reminder.reminderType }}
+              </mat-option>
+            </mat-select>
+
+            <button mat-button (click)="takeNote()">Done</button>
+            <div class=with-icon>
+              <mat-icon (click)="createCategory()">label</mat-icon>Add/Edit Category
+            </div>
+            <label></label>
+            <div class=with-icon>
+              <mat-icon (click)="createReminder()">notifications</mat-icon>Add/Edit Reminder
+            </div>
+            
+      </div>
+          
+    </mat-expansion-panel>
+
+</div>
+</div>

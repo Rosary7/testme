@@ -1,0 +1,11 @@
+<div style="margin:auto; width: 70%; margin-top: 30px;">
+    <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
+
+</div>
+<div class="keep-c-note-container">
+  
+	<!-- Include the notes collection with each note rendered as a separate NoteComponent -->
+		<!--Display the notes fetched from db.json -->
+	   
+		<app-note [note] = "note" *ngFor="let note of notes"></app-note>
+</div>
